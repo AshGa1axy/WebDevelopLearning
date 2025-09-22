@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="txt">欢迎中国联通领导莅临指导</span>
+
+<script type="text/javascript">
+    function show(){
+        // 1.去HTML中获取文本内容（DOM）
+        var txt = document.getElementById("txt");
+        var str = txt.innerText;
+
+        // 2.动态起来，把文本中的第一个字符放在字符串最后面
+        var firstChar = str[0];
+        var otherString = str.substring(1,str.length);
+        var newText = otherString + firstChar;
+        console.log(newText);
+
+        // 3.在HTML标签中更新内容
+        txt.innerHTML = newText;
+    }
+    // 4.定时器，循环
+    setInterval(show,1000);
+
+</script>
+</body>
+</html>
