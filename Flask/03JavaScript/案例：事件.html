@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text"  placeholder="请输入内容" id="txt">
+    <input type="button" value="提交" onclick="addInfo()">
+    <ul id="list">
+
+    </ul>
+<script type="text/javascript">
+    function addInfo(){
+        // 1.找到输入标签
+        var txtTag = document.getElementById("txt");
+        // 2.获取输入内容
+        var information = txtTag.value;
+        // 3.创建<li></li>标签
+        var newTag = document.createElement("li");
+        newTag.innerText = information;
+        // 4.标签添加至ul中
+        var parentTag = document.getElementById("list");
+        parentTag.appendChild(newTag);
+
+    }
+
+</script>
+</body>
+</html>
