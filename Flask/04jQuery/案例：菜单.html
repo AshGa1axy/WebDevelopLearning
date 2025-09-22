@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .menus{
+        width: 200px;
+        height: 800px;
+        border: 1px solid red;
+      }
+      .menus .header{
+        background-color: #0a58ca;
+        padding: 10px 5px;
+        cursor: pointer;
+      }
+      .menus .content a{
+        display: block;
+        padding: 5px 5px;
+        border-bottom:1px dotted #dddddd ;
+      }
+      .hide{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+<div class="menus">
+  <div class="header" onclick="clickMe(this)">上海</div>
+    <div class="content hide">
+      <a>宝山区</a>
+      <a>长宁区</a>
+      <a>普陀区</a>
+  </div>
+  <div class="header" onclick="clickMe(this)">北京</div>
+    <div class="content hide">
+      <a>东城区</a>
+      <a>西城区</a>
+      <a>海淀区</a>
+      <a>朝阳区</a>
+    </div>
+</div>
+
+<script src="static/jquery-3.7.1.min.js"></script>
+<script>
+  function clickMe(self){
+    $(self).next().toggleClass("hide");
+  }
+</script>
+</body>
+</html>
